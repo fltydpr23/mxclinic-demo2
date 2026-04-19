@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowLeft, Shield, Lock, Eye } from 'lucide-react'
+import { ArrowLeft } from 'lucide-react'
 
 const PrivacyPolicy: React.FC = () => {
   useEffect(() => {

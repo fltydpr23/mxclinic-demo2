@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
-import { Phone, MapPin, Menu, X, Star, Clock, ChevronDown, Send, Mail, User, MessageSquare, CheckCircle } from 'lucide-react'
+import { Phone, MapPin, Star, Clock, ChevronDown, Send, Mail, User, MessageSquare, CheckCircle } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 // ── DATA ────────────────────────────────────────────────
