@@ -585,7 +585,7 @@ function Home() {
       </section>
 
       {/* ── ENQUIRY FORM ── */}
-      <section id="enquiry" className="section section--tinted">
+      <section id="enquiry" className="section section--enquiry-bg">
         <div className="container">
           <motion.div className="section-header" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
             <span className="eyebrow">Start Your Journey</span>
