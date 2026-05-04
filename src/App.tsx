@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
-import { Phone, MapPin, Star, Clock, ChevronDown, Send, Mail, User, MessageSquare, CheckCircle } from 'lucide-react'
+import { Phone, MapPin, Star, Clock, ChevronDown } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 // ── DATA ────────────────────────────────────────────────
@@ -128,6 +128,7 @@ function FaqItem({ q, a, index }: { q: string; a: string; index: number }) {
 
 // ── ENQUIRY FORM ──────────────────────────────────────────
 
+/*
 function EnquiryForm() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', treatment: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
@@ -241,6 +242,7 @@ function EnquiryForm() {
     </form>
   )
 }
+*/
 
 const CalendlyEmbed = () => {
   return (
