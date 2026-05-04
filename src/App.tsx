@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, ChangeEvent, FormEvent } from 'react'
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
-import { Phone, MapPin, Star, Clock, ChevronDown } from 'lucide-react'
+import { Phone, MapPin, Star, Clock, ChevronDown, Send, Mail, User, MessageSquare, CheckCircle } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 // ── DATA ────────────────────────────────────────────────
@@ -128,12 +128,11 @@ function FaqItem({ q, a, index }: { q: string; a: string; index: number }) {
 
 // ── ENQUIRY FORM ──────────────────────────────────────────
 
-/*
 function EnquiryForm() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', treatment: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm(prev => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
@@ -155,7 +154,7 @@ function EnquiryForm() {
     window.open(buildWhatsAppMsg(), '_blank')
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
     // Email capture — replace with your CRM/Mailchimp endpoint if available
     setSubmitted(true)
@@ -242,7 +241,6 @@ function EnquiryForm() {
     </form>
   )
 }
-*/
 
 const CalendlyEmbed = () => {
   useEffect(() => {
@@ -263,7 +261,7 @@ const CalendlyEmbed = () => {
   return (
     <div 
       className="calendly-inline-widget" 
-      data-url="https://calendly.com/mxclinic-demo/consultation?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=111214&text_color=ffffff&primary_color=d2a860" 
+      data-url="https://calendly.com/mx-skin-clinic/mx-skin-clinic-appointment?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=111214&text_color=ffffff&primary_color=d2a860" 
       style={{ minWidth: '320px', height: '700px', borderRadius: '12px', overflow: 'hidden' }} 
     />
   );
@@ -621,6 +619,13 @@ function Home() {
           </motion.div>
           <motion.div className="enquiry-wrap" initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.1 }}>
             <CalendlyEmbed />
+            <div style={{ marginTop: '64px', borderTop: '1px solid rgba(210, 168, 96, 0.15)', paddingTop: '64px' }}>
+              <div style={{ textAlign: 'center', marginBottom: '32px' }}>
+                <h3 style={{ fontFamily: 'Cormorant Garamond', fontSize: '1.8rem', fontWeight: 300, color: 'var(--gold)' }}>Prefer to send a message?</h3>
+                <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem' }}>Fill out our enquiry form and we'll be in touch.</p>
+              </div>
+              <EnquiryForm />
+            </div>
           </motion.div>
         </div>
       </section>
