@@ -242,6 +242,16 @@ function EnquiryForm() {
   )
 }
 
+const CalendlyEmbed = () => {
+  return (
+    <div 
+      className="calendly-inline-widget" 
+      data-url="https://calendly.com/mx-skin-laser/consultation?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=111214&text_color=ffffff&primary_color=d2a860" 
+      style={{ minWidth: '320px', height: '700px', borderRadius: '12px', overflow: 'hidden' }} 
+    />
+  );
+};
+
 // ── HOME PAGE ─────────────────────────────────────────────
 
 function Home() {
@@ -593,7 +603,7 @@ function Home() {
             <p className="section-subtitle">Tell us about your skin goals. We'll be in touch within 24 hours — or connect instantly via WhatsApp.</p>
           </motion.div>
           <motion.div className="enquiry-wrap" initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.1 }}>
-            <EnquiryForm />
+            <CalendlyEmbed />
           </motion.div>
         </div>
       </section>
