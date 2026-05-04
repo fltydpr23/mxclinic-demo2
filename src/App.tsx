@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
 import { Phone, MapPin, Star, Clock, ChevronDown } from 'lucide-react'
 import { Link } from 'react-router-dom'
